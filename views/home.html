@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/ice_cream_favicon.png">
+    <script src = "scripts/ice-cream.js" defer></script>
     <title>Ice Cream Order Form</title>
 </head>
 <body>
     <div id="main">
         <h1>Ice Cream Order Form</h1>
-        <form action="#" method="get">
+        <form action="#" method="get" id = "form">
 
             <fieldset id="personal-info">
                 <legend>Personal Information</legend>
 
                 <label for="name">Name:</label>
+                <span class = "err" id = "name-error">Name cannot be empty</span>
                 <input type="text" id="name" name="name">
 
                 <label for="email">Email:</label>
+                <span class = "err" id = "email-error">Email cannot be empty</span>
                 <input type="email" id="email" name="email">
             </fieldset>
 
             <fieldset>
                 <legend>Order Details</legend>
 
-                <label for="flavor">Choose your flavor:</label>
+                <label for="flavor">Choose your flavor:</label> 
+                <span class = "err" id = "flavor-error">Flavor type cannot be empty</span>
                 <select name="flavor" id="flavor">
                     <option value="none">-- not selected --</option>
                     <option value="vanilla">Vanilla</option>
@@ -35,7 +39,8 @@
                     <option value="mint-with-chocolate-chip">Mint with chocolate chip</option>
                 </select>
 
-                <p>Choose your cone:</p>
+                <p>Choose your cone:</p> 
+                <span class = "err" id = "cone-error">Cone type cannot be empty</span> 
                 <label for="waffle-cone">
                     <input type="radio" id="waffle-cone" name="cone" value="waffle-cone">
                     Waffle Cone
